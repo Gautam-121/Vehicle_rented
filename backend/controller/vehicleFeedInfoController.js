@@ -24,7 +24,23 @@ const vehicleInfo = async (req, res, next) => {
 
         return new ErrorHandler(err , 500)
     }
-
 }
 
-module.exports = {vehicleInfo}
+const getVehicleData = async (req, res, next) => {
+
+    try {
+
+        const vehicleInfo = await Vehicle.find()
+
+        res.status(200).json({
+            success: true,
+            vehicleInfo
+        })
+
+    }catch(err){
+
+        return new ErrorHandler(err , 500)
+    }
+}
+
+module.exports = {vehicleInfo , getVehicleData}

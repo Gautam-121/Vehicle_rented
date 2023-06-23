@@ -15,6 +15,10 @@ const vehicleSchema = new mongoose.Schema({
         type:String,
         required:[true,"Please Enter vehicleModel"]
     },
+    quntity:{
+        type:Number,
+        default:1
+    },
     createdAt:{
         type:Date,
         default:new Date(date.now())
