@@ -1,17 +1,7 @@
 const mongoose = require("mongoose")
 
-const userSchema = new mongoose.Schema({
+const vehicleSchema = new mongoose.Schema({
 
-    firstName:{
-        type:String,
-        required:[true , "Please Enter the Name"],
-        trim:true
-    },
-    lastName:{
-        type:String,
-        required:[true , "Please Enter the Name"],
-        trim:true
-    },
     numberOfWheels:{
         type:Number,
         required:[true, "Please Enter Wheel number"],
@@ -25,18 +15,10 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:[true,"Please Enter vehicleModel"]
     },
-    startDate:{
-        type:Date,
-        required:true
-    },
-    endDate:{
-        type:Date,
-        required:true
-    },
     createdAt:{
         type:Date,
         default:new Date(date.now())
     }
 })
 
-module.exports = mongoose.model("user" , userSchema)
+module.exports = mongoose.model("vehicle" , vehicleSchema)
