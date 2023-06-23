@@ -1,4 +1,5 @@
 const User = require('../model/userModel.js')
+const ErrorHandler = require("../utils/errorHandler.js")
 
 const register = async (req, res, next) => {
 

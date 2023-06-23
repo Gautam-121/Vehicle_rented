@@ -10,6 +10,4 @@ const UserRouter = require("./router/UserRouter.js")
 
 
 
-
-
 module.exports = app
