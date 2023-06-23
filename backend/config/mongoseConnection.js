@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const mongooseConnection = ()=>{
 
-    mongoose.connect( process.env.DB_URL , {
+    mongoose.connect( "mongodb://localhost:27017/rental", {
         useNewUrlParser : true
     })
     .then(data => console.log(`mongoose connection made on ${data.connection.host}`))

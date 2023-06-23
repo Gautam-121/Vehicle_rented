@@ -21,7 +21,7 @@ const vehicleSchema = new mongoose.Schema({
     },
     createdAt:{
         type:Date,
-        default:new Date(date.now())
+        default:new Date(Date.now())
     }
 })
 

@@ -38,26 +38,5 @@ const register = async (req, res, next) => {
     }
 }
 
-const login = async (req, res, next) => {
 
-    try {
-
-
-
-    } catch (err) {
-        return new ErrorHandler(err, 500)
-    }
-}
-
-const logOut = async (req, res, next) => {
-
-    try {
-
-
-
-    } catch (err) {
-        return new ErrorHandler(err, 500)
-    }
-}
-
-module.exports = { register, login, logOut }
+module.exports = { register }

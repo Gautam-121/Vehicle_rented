@@ -10,7 +10,7 @@ process.on("uncaughtException" , (err)=>{
 })
 
 //Set environment Configration
-dotenv.config({path : "/config/.env"})
+dotenv.config({path : "backend/config/.env"})
 
 //Made connection with mongoDb
 mongooseConnection()

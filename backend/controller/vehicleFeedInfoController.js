@@ -3,9 +3,13 @@ const ErrorHandler = require("../utils/errorHandler")
 
 
 // Owner or admin enter Vehicle Info
-const vehicleInfo = async (req, res, next) => {
+const vehicleInfo = async(req, res, next) => {
 
     try {
+
+        console.log("Gauatm")
+
+        console.log(req.body)
 
         const { numberOfWheels, vehicleType, vehicleModel } = req.body
 
@@ -15,13 +19,14 @@ const vehicleInfo = async (req, res, next) => {
             vehicleModel
         })
 
+        console.log("dhakate")
+
         res.status(201).json({
             success : true,
             vehicleInfo
         })
 
     }catch(err){
-
         return new ErrorHandler(err , 500)
     }
 }

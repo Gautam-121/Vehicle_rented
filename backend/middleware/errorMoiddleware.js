@@ -10,4 +10,4 @@ const errorMiddleWare = async(err , req , res , next) => {
     })
 }
 
-module,exports = errorMiddleWare
+module.exports = errorMiddleWare
