@@ -13,11 +13,7 @@ const vehicleInfo = async(req, res, next) => {
 
         const { numberOfWheels, vehicleType, vehicleModel } = req.body
 
-        const vehicleInfo = await Vehicle.create({
-            numberOfWheels,
-            vehicleType,
-            vehicleModel
-        })
+        const vehicleInfo = await Vehicle.create(req.body)
 
         console.log("dhakate")
 
@@ -27,7 +23,7 @@ const vehicleInfo = async(req, res, next) => {
         })
 
     }catch(err){
-        return new ErrorHandler(err , 500)
+        return next(new ErrorHandler(err , 500))
     }
 }
 
@@ -43,8 +39,7 @@ const getVehicleData = async (req, res, next) => {
         })
 
     }catch(err){
-
-        return new ErrorHandler(err , 500)
+        return next(new ErrorHandler(err , 500))
     }
 }
 

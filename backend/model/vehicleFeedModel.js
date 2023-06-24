@@ -3,9 +3,9 @@ const mongoose = require("mongoose")
 const vehicleSchema = new mongoose.Schema({
 
     numberOfWheels:{
-        type:Number,
+        type:String,
         required:[true, "Please Enter Wheel number"],
-        enum : [2 , 4]
+        enum : ["2" , "4"]
     },
     vehicleType:{
         type:String,
@@ -18,6 +18,11 @@ const vehicleSchema = new mongoose.Schema({
     quntity:{
         type:Number,
         default:1
+    },
+    price:{
+        type:Number,
+        required:[true , "Please Enter the price"],
+        min:[10 , "Price Should be above 10"]
     },
     createdAt:{
         type:Date,

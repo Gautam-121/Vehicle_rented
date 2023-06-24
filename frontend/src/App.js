@@ -1,7 +1,31 @@
+import QuestionScreen from "./Components/QuestionScreen";
+import React from "react";
+import { useState } from "react";
+import UserContext from "./utils/UserContext";
 
 
 function App() {
-  return <h1>This is Working Code</h1>
+
+  const [user, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    numberOfWheels: "",
+    vehicleType: "",
+    vehicleModel: ""
+  })
+
+  return (
+    <>
+      <UserContext.Provider
+        value={
+          {
+            user: user,
+            setUser: setUser
+          }}>
+        <QuestionScreen />
+      </UserContext.Provider>
+    </>
+  )
 }
 
 export default App;
